@@ -1,0 +1,2578 @@
+@font-face { font-family: 'Montserrat-ExtraLight200'; src: url(/assets/templates/font/Montserrat/Montserrat-ExtraLight.ttf) format('truetype');font-display: fallback;}
+@font-face { font-family: 'Montserrat-Regular400'; src: url(/assets/templates/font/Montserrat/Montserrat-Regular.ttf) format('truetype'); font-display: fallback;}
+@font-face { font-family: 'Orbitron-Medium500'; src: url(/assets/templates/font/Orbitron/Orbitron-Medium.ttf) format('truetype');font-display: fallback;}
+@font-face { font-family: 'Orbitron-Bold700'; src: url(/assets/templates/font/Orbitron/Orbitron-Bold.ttf) format('truetype');font-display: fallback;}
+:root {
+  --font-family-Montserrat-200: 'Montserrat-ExtraLight200';
+  --font-family-Montserrat-400: 'Montserrat-Regular400';
+  --font-family-Orbitron-500: 'Orbitron-Medium500';
+  --font-family-Orbitron-700: 'Orbitron-Bold700';
+  --font-size-site: 18px;
+  --font-size: clamp(1.2rem, 0.4vw, 2.2rem);
+  --font-size-h6: clamp(1.21rem, 0.65vw, 1rem);
+  --font-size-h5: clamp(1.25rem, 0.95vw, 1.2rem);
+  --font-size-h4: clamp(1.3rem, 1.2vw, 1.4rem);
+  --font-size-h3: clamp(1.4rem, 3.8vw, 1.8rem);
+  --font-size-h2: clamp(1.6rem, 4.2vw, 2.66rem);
+  --font-size-h1: clamp(2.1rem, 8.4vw, 7.73rem);
+  --font-color-site: #ffffff;
+  --font-color-site-hover: #999;
+  --font-color-dynamic: #ff0000;
+  --background-color-site: #000;
+  --background-color-site-pomoc: #ff00ff;
+  --color-font-hover-gradient: linear-gradient(120deg, #ff3000,#ff0000, #ff3000);
+  /* --color-font-hover-gradient-line: linear-gradient(90deg,#ffbb00, #ff7700, #ff7700); */
+  --color-font-hover-gradient-line: linear-gradient(120deg,#ff3000,#ff0000, #ff3000);
+  --color-button-gradient: linear-gradient(45deg,#ffffff, #000000, #000000, #000000, #ffffff);
+  --color-button-gradient-hover: linear-gradient(45deg,#ff0000, #000000, #000000, #000000, #ff0000);
+  --color-card-gradient-wb: linear-gradient(315deg,#ffffff, #000000);
+  --color-card-gradient-yp: linear-gradient(315deg,#ff0000, #ff3000, #ff0000);
+  /* --color-card-gradient-yp: linear-gradient(315deg,#ffffff, #262626 ,#ffffff); */
+  --color-card-gradient-bt: linear-gradient(transparent, #ffffff, #ffffff, #ffffff, transparent);
+  --color-card-gradient-yt: linear-gradient(transparent, #ff0000, #ff3000, #ff0000, transparent);
+  --color-text-shadow: #888;
+  --color-card-rgba: rgba(0, 0, 0, .8);
+  --color-text-shadow-rgba-min: rgba(125, 125, 125, 0.2);
+  --color-text-shadow-rgba-max: rgba(125, 125, 125, 0.4);
+  --text-card-shadow: -.1px 0 #000, 0 .1px #000, .1px 0 #000, 0 -.1px #000;
+  --header-text-shadow: 1px 1px 1px var(--color-text-shadow),1px 2px 1px var(--color-text-shadow),1px 3px 1px var(--color-text-shadow),1px 4px 1px var(--color-text-shadow),1px 5px 1px var(--color-text-shadow),1px 6px 1px var(--color-text-shadow),1px 7px 1px var(--color-text-shadow),1px 18px 6px var(--color-text-shadow-rgba-max),1px 22px 10px var(--color-text-shadow-rgba-min),1px 25px 35px var(--color-text-shadow-rgba-min),1px 30px 60px var(--color-text-shadow-rgba-max);
+  --header-text-shadow1: 1px 1px 1px var(--color-text-shadow),1px 2px 1px var(--color-text-shadow),1px 3px 1px var(--color-text-shadow),1px 4px 1px var(--color-text-shadow),1px 5px 1px var(--color-text-shadow),1px 6px 6px var(--color-text-shadow-rgba-max),1px 16px 10px var(--color-text-shadow-rgba-min),1px 19px 35px var(--color-text-shadow-rgba-min),1px 24px 60px var(--color-text-shadow-rgba-max);
+  --header-text-shadow-2: 1px 1px 1px var(--color-text-shadow),1px 2px 1px var(--color-text-shadow),1px 3px 1px var(--color-text-shadow),1px 4px 1px var(--color-text-shadow),1px 4px 6px var(--color-text-shadow-rgba-max),1px 8px 10px var(--color-text-shadow-rgba-min),1px 11px 35px var(--color-text-shadow-rgba-min),1px 20px 60px var(--color-text-shadow-rgba-max);
+  --header-text-shadow-21: 1px 1px 1px var(--color-text-shadow),1px 2px 1px var(--color-text-shadow),1px 3px 1px var(--color-text-shadow),1px 4px 6px var(--color-text-shadow-rgba-max),1px 8px 10px var(--color-text-shadow-rgba-min),1px 11px 35px var(--color-text-shadow-rgba-min),1px 20px 60px var(--color-text-shadow-rgba-max);
+  --patronite-img: url(/assets/templates/images/logo/patronite-400.webp);
+  --width-galeria-img: 480px;
+  --height-galeria-img: 360px;
+  --patronite-img: url(/assets/templates/images/logo/patronite-400.webp);
+  --galeria-wycieczki: url(/assets/templates/images/galeria/wycieczki-klas-spodek-katowice-esl-pga-poznan320x240.webp);
+  --galeria-turnieje: url(/assets/templates/images/galeria/turniej-mistrzostw-polski-klas-e-sportowych320x240.webp);
+  --galeria-eventy: url(/assets/templates/images/galeria/eventy-organizowane-w-jasle320x240.webp);
+  --slajd-background-img: url(/assets/templates/images/loga-e-sports-games-tlo-czarne2560x1440.webp);
+  --navbar-height: 5rem;
+  --space-l: clamp(2.25rem, calc(2.16rem + 0.43vw), 2.50rem);
+  --box-shadow-bialy: #fff 0px 11px 15px 0px;
+  --box-shadow-bialy-kropa: #ff7700 0 0 0 2px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* styl paskĂłw przewijania start */
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background-color-site);
+  border-radius: 100vw;
+  margin-block: 2px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--font-color-dynamic);
+  border-radius: 100vw;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--font-color-site);
+  border-radius: 100vw;
+}
+::-webkit-scrollbar-corner {
+  background: var(--background-color-site);
+}
+/* styl paskĂłw przewijania koniec */
+html {
+  font-size: var(--font-size-site);
+}
+body {
+  font-family: var(--font-family-Montserrat-200);
+  font-size: var(--font-size);
+  color: var(--font-color-site);
+  background-color: var(--background-color-site);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 60%;
+  height: auto;
+  margin: 0 20% 0 20%;
+  padding: 0;
+}
+.container-fluid {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+header {
+  margin-top: var(--navbar-height);
+  padding-top: var(--navbar-height);
+  padding-bottom: calc(var(--navbar-height) / 2);
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+b {
+  text-transform: capitalize;
+  font-family: var(--font-family-Montserrat-200);
+  font-size: var(--font-size-header-h6);
+}
+h1 {
+  font-family: var(--font-family-Orbitron-700);
+  font-size: var(--font-size-h1);
+  text-transform: uppercase;
+}
+h1 span {
+  font-size: calc(var(--font-size-h1) + .2em);
+  font-weight: 700;
+  text-transform: none;
+}
+.shadow {
+  color: var(--background-color-site);
+  text-shadow: var(--header-text-shadow);
+}
+.shadow-h3 {
+  color: var(--font-color-site);
+  text-shadow: var(--header-text-shadow-2);
+}
+h2 {
+  font-family: var(--font-family-Orbitron-500);
+  font-size: var(--font-size-h2);
+  text-transform: uppercase;
+}
+h2 span {
+  font-size: calc(var(--font-size-h2) + .18em);
+  font-weight: 700;
+  background-image: var(--color-font-hover-gradient);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+h3 {
+  font-family: var(--font-family-Orbitron-500);
+  font-size: var(--font-size-h3);
+  margin: calc(var(--space-l) / 4);
+}
+h4 {
+  font-family: var(--font-family-Montserrat-400);
+  font-size: var(--font-size-h4);
+}
+h5 {
+  font-family: var(--font-family-Montserrat-200);
+  font-size: var(--font-size-h5);
+}
+h6 {
+  font-family: var(--font-family-Montserrat-200);
+  font-size: var(--font-size-h6);
+}
+a {
+  font-family: var(--font-family-Orbitron-500);
+  color: var(--font-color-site);
+  text-decoration: none;
+  cursor: pointer;
+}
+a:is(:hover, :focus) {
+  color: var(--font-color-dynamic);
+}
+ul {
+  list-style: none;
+}
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+figcaption {
+  display: none;
+}
+p { 
+  text-indent: var(--font-size);
+  font-size: var(--font-size);
+  margin: var(--font-size);
+}
+.btn {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+  margin: var(--space-l) 0;
+}
+.btn a {
+  position: relative;
+  width: 320px;
+  height: 48px;
+  padding: .2rem;
+  display: inline-block;
+  background: var(--font-color-site-hover);
+  margin: .4rem;
+  inset: 0;
+}
+.btn a::before, .btn a::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: var(--color-button-gradient);
+  transition: .5s;
+}
+.btn a:hover:before {
+  inset: -2px;
+  background: var(--color-button-gradient-hover);
+}
+.btn a:hover::after {
+  inset: -2px;
+  background: var(--color-button-gradient-hover);
+  filter: blur(.6rem);
+}
+.btn a b {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background: var(--background-color-site);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: var(--font-color-site);
+  letter-spacing: .1rem;
+  border: 1px solid var(--background-color-site);
+  overflow: hidden;
+}
+.btn a b:hover {
+  color: var(--font-color-dynamic);
+}
+.btn a b::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: var(--color-text-shadow-rgba-min);
+  transform: skew(25deg);
+}
+/* start nav strona */
+.burger-menu, .burger-menu-btn, .burger-wcag {
+  display: none;
+}
+.header-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: var(--navbar-height);
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--space-l);
+}
+.header-nav.black {
+  background-color: var(--background-color-site);
+}
+.header-nav-logo {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-nav-logo figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-nav-logo figure img {
+  height: var(--navbar-height);
+  cursor: pointer;
+}
+.header-nav-menu {
+  width: fit-content;
+  height: var(--navbar-height);
+}
+.header-nav-menu ul {
+  width: fit-content;
+  height: var(--navbar-height);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.header-nav-menu ul li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: var(--font-family-Montserrat-400);
+  font-size: var(--font-size-header-h4);
+  text-transform: uppercase;
+}
+.header-nav-menu-nr {
+  font-family: var(--font-family-Orbitron-500);
+  font-size: var(--font-size-header-h4);
+  color: var(--font-color-dynamic);
+  padding-right: calc(var(--space-l) / 8 );
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header-nav-menu ul li a {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: var(--font-family-Montserrat-400);
+  font-size: var(--font-size-header-h4);
+  margin-right: var(--space-l);
+}
+.header-nav-menu ul li a::after, .burger-menu ul li a::after{
+  content: "";
+  position: absolute;
+  background: var(--color-font-hover-gradient-line);
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: -4px;
+  transition: .4s;
+}
+.header-nav-menu ul li a:hover:after, .burger-menu ul li a:hover:after {
+  width: 100%;
+}
+.header-nav-wcag {
+  width: fit-content;
+  height: var(--navbar-height);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.wcag21-roz, .wcag21-kon {
+  height: var(--navbar-height);
+  width: fit-content;
+  padding-left: var(--space-l);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.wcag21-roz .napis, .wcag21-kon .napis {
+  font-family: var(--font-family-Montserrat-400);
+}
+.wcag21-roz ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.wcag21-roz ul li {
+  font-family: var(--font-family-Orbitron-500);
+  margin: 0 calc(var(--space-l) / 4);
+}
+.wcag21-kon ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.wcag21-kon ul li img {
+width: var(--font-size-site);
+height: var(--font-size-site);
+}
+/* stop nav strona */
+/* stop nav strona */
+.main-header {
+  width: 100%;
+  height: 100vh;
+  background-image: var(--slajd-background-img);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-header .main-header-slajd {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-header-button {
+  margin-top: var(--space-l);
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slajd {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.slajd-info {
+  font-family: var(--font-family-Orbitron-700);
+  font-weight: 700;
+  text-align: center;
+}
+.slajd-text {
+  margin-top: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: var(--font-size-h2);
+  font-family: var(--font-family-Orbitron-500);
+  font-size: var(--font-size-h2);
+}
+.slajd-text .static-text {
+  text-transform: uppercase;
+  font-size: var(--font-size-h2);
+}
+.slajd-text .static-text span {
+  font-size: var(--font-size-h2);
+  background-image: var(--color-font-hover-gradient);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: .1rem;
+}
+.slajd-text .dynamic-text {
+  margin-left: 1rem;
+  line-height: var(--font-size-h2);
+  height: var(--font-size-h2);
+  overflow: hidden;
+}
+.dynamic-text {
+  list-style: none;
+  font-family: var(--font-family-Orbitron-500);
+  text-transform: uppercase;
+  font-size: var(--font-size-h2);
+  color: var(--font-color-dynamic);
+  position: relative;
+}
+.dynamic-text li {
+  top: 0;
+  font-size: var(--font-size-h2);
+  position: relative;
+  animation: next-text 12s steps(4) infinite;
+}
+@keyframes next-text {
+  100% {
+    top: calc(var(--font-size-h2) * -4);
+  }
+}
+.dynamic-text li::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  border-left: 2px solid var(--color-font-dynamic);
+  animation: dynamic-text 3s steps(9) infinite;
+}
+@keyframes dynamic-text {
+  100% {
+    left: calc(100% + var(--font-size-h2));
+  }
+}
+.opis-slajd p {
+  font-family: var(--font-family-Montserrat-200);
+  font-size: var(--font-size-h3);
+  width: 60vw;
+  height: auto;
+  margin: 2vw 0;
+  text-align: center;
+}
+/* koniec slajd  */
+/* geneza ec53 start  */
+.geneza-ec53 {
+  margin-top: var(--space-l);
+  min-width: fit-content;
+}
+.geneza-ec53 section {
+  margin-top: calc( var(--space-l) / 1);
+}
+.geneza-ec53-areas1, .geneza-ec53-areas2 {
+  margin: calc(var(--space-l) / 1) 0;
+  display: grid;
+  gap: calc(var(--space-l) / 2);
+  grid-template-columns: repeat(3, minmax(var(--width-galeria-img), 1fr));
+}
+.geneza-artykul {
+  height: var(--height-galeria-img);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.geneza-artykul header {
+  margin: 0;
+  padding: calc(var(--space-l) / 8) 0;
+  text-align: left;
+  align-items: flex-start;
+}
+.geneza-artykul-col-span2 {
+  grid-column: span 2;
+  align-items: flex-start;
+}
+.geneza-artykul-col-span3 {
+  grid-column: span 3;
+}
+.header-min {
+  text-align: center;
+}
+.geneza-foto figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.geneza-foto figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: var(--box-shadow-bialy);
+}
+/* geneza ec53 start  */
+/* dane ec53 start */
+.dane-info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.dane-info-ec53 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.dane-info-ec53 header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0;
+  padding: calc(var(--space-l) / 2) 0;
+}
+.ltyp-status {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+.dane-ec53 {
+  display: flex;
+  font-size: var(--font-size-header-h5);
+}
+.dane-ec53-nazwa ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.dane-ec53-nazwa ul li{
+  font-family: var(--font-family-Orbitron-500);
+  color: var(--font-color-dynamic);
+  list-style: none;
+  padding-right: .4rem;
+}
+.dane-ec53-nazwa-wpis ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.dane-ec53-nazwa-wpis ul li{
+  list-style: none;
+}
+.dane-ec53-nazwa-wpis .tel {
+  display: none;
+}
+.dane-ec53-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.geneza-logo-animacja {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: zoomIn .7s ease forwards, floatImage 4s ease-in-out infinite;
+  animation-delay: .4s, 1s;
+}
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* dane ec53 koniec */
+/* start kard zarzad ec53 */
+.card-row {
+  margin: calc(var(--space-l) / 4) 0;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: calc(var(--space-l) * 1);
+}
+.card-row-komisja {
+  margin: calc(var(--space-l) / 1) 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+.card-row .cardBox {
+  position: relative;
+  width: 340px;
+  height: 420px;
+  background: var(--font-color-dynamic);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: calc(var(--space-l) / 10);
+  
+}
+.card-row .cardBox::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-card-gradient-yp);
+}
+.card-row .cardBox::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-card-gradient-yp);
+  filter: blur(20px);
+}
+.card-row .cardBox b {
+  position: absolute;
+  inset: 4px;
+  background: var(--color-card-rgba);
+  z-index: 200;
+}
+.card-row .cardBox .layer h4 {
+  text-transform: uppercase;
+  text-align: center; 
+  color: var(--font-color-dynamic); 
+  text-shadow: var(--text-card-shadow);
+  letter-spacing: .1rem;
+}
+.card-row .cardBox .layer {
+  position: absolute;
+  z-index: 300;
+  transition: .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card-row .cardBox:hover .layer {
+  transform: scale(.9);
+  transform: translateY(-28px);
+}
+.card-row .cardBox:hover .layer h4 {
+  transform: scale(0);
+}
+.card-row .cardBox .content {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: .2s;
+  transform: scale(0);
+  z-index: 300;
+}
+.card-row .cardBox .content h4 {
+  text-transform: uppercase;
+  text-align: center; 
+  color: var(--font-color-dynamic); 
+  text-shadow: var(--text-card-shadow);
+  letter-spacing: .1rem;
+}
+.card-row .cardBox:hover .content {
+  transform: scale(1);
+  transform: translateY(-40px);
+}
+/* koniec kard zarzad ec53 */
+/* start kart kategorie */
+.card-rowInfo {
+  margin: calc(var(--space-l) / 4) 0;
+  padding: 2rem;
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.cardInfo {
+  position: relative;
+  width: 320px;
+  height: 220px;
+  max-height: max-content;
+  background: var(--font-color-site-hover);
+  transition: .5s;
+  margin: var(--space-l) calc(var(--space-l) / 1);
+}
+.cardInfo:hover {
+  height: 490px;
+}
+.cardInfo .lines {
+  position: absolute;
+  inset: 0;
+  background: var(--background-color-site);
+  overflow: hidden;
+}
+.cardInfo .lines::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 140px;
+  background: var(--color-card-gradient-bt);
+  animation: obrysD 4s linear infinite;
+  animation-play-state: paused;
+}
+.cardInfo:hover .lines::before {
+  animation-play-state: running;
+}
+@keyframes obrysD {
+  0% {
+    transform: translate(-50%,-50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%,-50%) rotate(360deg);
+  }
+}
+.cardInfo .lines::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  background: var(--background-color-site);
+}
+.cardInfo .imgBx {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  transform: translateX(-50%);
+  background: var(--background-color-site);
+  transition: .5s;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardInfo:hover .imgBx {
+  top: 25px;
+  width: 220px;
+  height: 220px;
+}
+.cardInfo .imgBx::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 150px;
+  transform: translate(-50%,-50%);
+  background: var(--color-card-gradient-yt);
+  animation: obrysD2 6s linear infinite;
+  animation-play-state: paused;
+}
+.cardInfo:hover .imgBx::before {
+  animation-play-state: running;
+}
+@keyframes obrysD2 {
+  0% {
+    transform: translate(-50%,-50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%,-50%) rotate(360deg);
+  }
+}
+.cardInfo .imgBx::after {
+  content: '';
+  inset: 3px;
+  position: absolute;
+  background: var(--background-color-site);
+}
+.cardInfo .imgBx figure {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  z-index: 3;
+  opacity: .6;
+  transition: .5s;
+}
+.cardInfo:hover .imgBx figure {
+  opacity: 1;
+  width: 180px;
+}
+.cardInfo .imgBx img {
+  width: 100px;
+  height: 100px;
+}
+.cardInfo:hover .imgBx img {
+  width: 180px;
+  height: 180px;
+}
+.cardInfo .textCard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.cardInfo .textCard .view {
+  padding: 20px 20px;
+  text-align: center;
+  width: 100%;
+  transition: .5s;
+  transform: translateY(168px);
+}
+.cardInfo:hover .textCard .view {
+  transform: translateY(0px);
+}
+.cardInfo .textCard .view h4 {
+  font-family: var(--font-family-Orbitron-700);
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin-bottom: calc(var(--space-l) / 4);
+}
+.cardInfo .textCard .view p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  text-align: left;
+}
+.cardInfo .textCard .view a {
+  font-family: var(--font-family-Orbitron-500);
+  text-transform: uppercase; 
+  letter-spacing: .1rem;
+}
+/* koniec kart kategorie */
+/* start intro galeria */
+.glleria-intro {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.card-galery-w {
+  width: var(--width-galeria-img);
+  height: var(--height-galeria-img);
+  position: relative;
+  margin: 0 1rem;
+  background: var(--galeria-wycieczki) center;
+  background-size: cover;
+  color: var(--font-color-dynamic);
+  border-radius: 20px;
+  box-shadow: var(--box-shadow-bialy);
+}
+.card-galery-t {
+  width: var(--width-galeria-img);
+  height: var(--height-galeria-img);
+  position: relative;
+  margin: 0 1rem;
+  background: var(--galeria-turnieje) center;
+  background-size: cover;
+  color: var(--font-color-dynamic);
+  border-radius: 20px;
+  box-shadow: var(--box-shadow-bialy);
+}
+.card-galery-e {
+  width: var(--width-galeria-img);
+  height: var(--height-galeria-img);
+  position: relative;
+  margin: 0 1rem;
+  background: var(--galeria-eventy) center;
+  background-size: cover;
+  color: var(--font-color-dynamic);
+  border-radius: 20px;
+  box-shadow: var(--box-shadow-bialy);
+}
+.card-galery-e .overlay, .card-galery-t .overlay, .card-galery-w .overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-card-rgba);
+  opacity: 0;
+  transition: .5s;
+  border-radius: 20px;
+}
+.card-galery-e:hover .overlay, .card-galery-t:hover .overlay, .card-galery-w:hover .overlay {
+  opacity: 1;
+}
+.card-galery-e .btn-galery, .card-galery-t .btn-galery, .card-galery-w .btn-galery {
+  text-transform: uppercase;
+  font-family: var(--font-family-Orbitron-500);
+}
+.card-galery-e h4, .card-galery-t h4, .card-galery-w h4 {
+  text-transform: uppercase;
+  font-family: var(--font-family-Orbitron-700);
+  font-size: var(--font-size-h2);
+  letter-spacing: .2rem;
+}
+/* koniec intro galeria */
+/* start kooperacja  */
+.kooperacja {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.kooperacja .kooperacja-logo a {
+  filter: grayscale(100%);
+  transition: .5s;
+}
+.kooperacja .kooperacja-logo a:hover {
+  filter: grayscale(0%);
+}
+/* koniec kooperacja  */
+/* start dane adres */
+.address {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "kontak-img kontakt-dane";
+  gap: 4rem;
+  margin: 2rem 0;
+}
+address {
+  font-style: normal;
+  margin-bottom: 1rem;
+}
+address b {
+  font-size: var(--font-size-header-h4);
+  font-weight: 500;
+  font-family: var(--font-family-Orbitron-500);
+}
+.kontak-img {
+  grid-area: kontak-img;
+  display: flex;
+  justify-content: end;
+}
+.kontak-img img {
+  max-width: fit-content;
+  border-radius: 20px;
+  box-shadow: var(--box-shadow-bialy);
+}
+.kontakt-dane {
+  grid-area: kontakt-dane;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family-Montserrat-400);
+  font-size: var(--font-size-header-h5);
+}
+.kontakt-dane .email a {
+  font-family: var(--font-family-Montserrat-400);
+  font-size: var(--font-size-header-h5);
+}
+.kontakt-dane .email span {
+  background-image: var(--color-font-hover-gradient);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+/* koniec dane adres */
+/******************* social media **********/
+.social-media {
+  position: relative;
+  margin: var(--space-l) 0 0 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.social-media ul, .social-media2 ul, .social-media3 ul {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.social-media li, .social-media2 li, .social-media3 li {
+  list-style: none;
+  margin: 0px 40px;
+}
+.social-media li a img, .social-media2 li a img, .social-media3 li a img
+{
+  width: 50%;
+  margin: 1rem;
+  transition: .5s;
+}
+.social-media li a, .social-media2 li a, .social-media3 li a {
+  position: relative;
+  display: block;
+  width: 80px;
+  height: 80px;
+  background: #111;
+  text-align: center;
+  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0,0);
+  transition: .5s;
+  box-shadow: -20px 20px 10px rgba(0,0,0,.5);
+}
+.social-media li a:before, .social-media2 li a:before, .social-media3 li a:before {
+  content:'';
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  height: 100%;
+  width: 20px;
+  background: #222;
+  transition: .5s;
+  transform: rotate(0deg) skewY(-45deg);
+}
+.social-media li a:after, .social-media2 li a:after, .social-media3 li a:after
+{
+  content:'';
+  position: absolute;
+  bottom: -20px;
+  left: -10px;
+  height: 20px;
+  width: 100%;
+  background: #222;
+  transition: .5s;
+  transform: rotate(0deg) skewX(-45deg);
+}
+.social-media li a:hover, .social-media2 li a:hover, .social-media3 li a:hover {
+  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px,-20px);
+}
+.social-media li:hover:nth-child(1) a {
+  background: #3b5999;
+  box-shadow: -50px 50px 50px rgba(59,89,153 ,1);
+}
+.social-media li:hover:nth-child(1) a:before {
+  background: #2e4a86; 
+}
+.social-media li:hover:nth-child(1) a:after {
+  background: #4a69ad; 
+}
+.social-media li:hover:nth-child(2) a {
+  background: #cd201f;
+  box-shadow: -50px 50px 50px rgba(205,32,31 ,1);
+}
+.social-media li:hover:nth-child(2) a:before {
+  background: #c30f0f; 
+}
+.social-media li:hover:nth-child(2) a:after {
+  background: #a80808; 
+}
+.social-media li:hover:nth-child(3) a {
+  background: #111;
+  box-shadow: -50px 50px 50px rgba(50, 50, 50 ,1);
+}
+.social-media li:hover:nth-child(3) a:before {
+  background: #111; 
+}
+.social-media li:hover:nth-child(3) a:after {
+  background: #111; 
+}
+.social-media li:hover:nth-child(4) a {
+  background: #6441A4;
+  box-shadow: -50px 50px 50px rgba(100, 65, 164 ,1);
+}
+.social-media li:hover:nth-child(4) a:before {
+  background: #6441A4; 
+}
+.social-media li:hover:nth-child(4) a:after {
+  background: #6441A4; 
+}
+.social-media2 li:hover:nth-child(1) a {
+  background: #3b5999;
+  box-shadow: -50px 50px 50px rgba(59,89,153 ,1);
+}
+.social-media2 li:hover:nth-child(1) a:before {
+  background: #2e4a86; 
+}
+.social-media2 li:hover:nth-child(1) a:after {
+  background: #4a69ad; 
+}
+.social-media3 li:hover:nth-child(1) a {
+  background: #cd201f;
+  box-shadow: -50px 50px 50px rgba(205,32,31 ,1);
+}
+.social-media3 li:hover:nth-child(1) a:before {
+  background: #c30f0f; 
+}
+.social-media3 li:hover:nth-child(1) a:after {
+  background: #a80808; 
+}
+/******************* social media koniec **********/
+/* start footer */
+.footer-main {
+  width: 100%;
+  margin-top: calc(var(--space-l) * 4);
+  padding: calc(var(--space-l) / 1) calc(var(--space-l) / 2);
+}
+.footer-sitemap {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+}
+.footer-sitemap ul {
+  list-style: none;
+}
+.footer-sitemap ul:nth-child(1),
+.footer-sitemap ul:nth-child(2),
+.footer-sitemap ul:nth-child(3){
+  flex-basis: 320px;
+}
+.footer-sitemap ul:nth-child(4) li{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-sitemap ul:nth-child(4) li p {
+  font-family: var(--font-family-Montserrat-400);
+  text-transform: none;
+}
+.footer-sitemap ul li {
+  font-family: var(--font-family-Orbitron-500);
+  font-size: var(--font-size-h6);
+  padding: calc(var(--space-l) / 6)  0;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+}
+.footer-sitemap ul li span {
+  font-family: var(--font-family-Orbitron-700);
+  font-size: var(--font-size-h4);
+  text-transform: uppercase;
+  color: var(--font-color-dynamic);
+  flex-wrap: wrap;
+}
+.patronite-img {
+  width: 400px;
+  height: 132px;
+  background: var(--patronite-img);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.section-copy {
+  width: 100%;
+  padding-top: calc(var(--space-l) / 4);
+}
+.section-copy ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+  margin-top: calc(var(--space-l) / 2);
+  padding: .4rem 1rem;
+}
+.section-copy ul li span {
+  font-family: var(--font-family-Orbitron-500);
+}
+
+
+
+
+@media only screen and (min-width: 200px) and (max-width: 319.98px){
+  :root {  --font-size-site: 10px;
+    --navbar-height-burger: calc(100vh - var(--navbar-height));
+    --width-galeria-img: 220px;
+    --height-galeria-img: 165px;
+    --patronite-img: url(/assets/templates/images/logo/patronite-mini.webp);
+    --galeria-wycieczki: url(/assets/templates/images/galeria/wycieczki-klas-spodek-katowice-esl-pga-poznan220x165.webp);
+    --galeria-turnieje: url(/assets/templates/images/galeria/turniej-mistrzostw-polski-klas-e-sportowych220x165.webp);
+    --galeria-eventy: url(/assets/templates/images/galeria/eventy-organizowane-w-jasle220x165.webp);
+    --slajd-background-img: url(/assets/templates/images/loga-e-sports-games-tel240x320.webp);
+  }
+  .container {  width: 100%; margin: 0;}
+  .btn { margin: calc(var(--space-l) / 4)  0; }
+  .btn a { width: 220px; }
+  h1 span {  font-size: calc(var(--font-size-h1) + .162em); }
+  h2 span {  font-size: var(--font-size-h2); }
+  .shadow { text-shadow: var(--header-text-shadow1); }
+  .shadow-h3 { text-shadow: var(--header-text-shadow-21); }
+/* start nav strona */
+.header-nav-menu, .header-nav-wcag { display: none; }
+.header-nav { padding: 0 calc(var(--space-l) / 2); }
+.header-nav-logo figure img { width: 100%; }
+.burger-menu-btn {
+  display: block;
+  width: calc(var(--navbar-height) - var(--space-l));
+  height: calc(var(--navbar-height) - var(--space-l));
+  background-image: url(/assets/templates/icon/burger-bily.webp), url(/assets/templates/icon/close.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center, center left var(--navbar-height);
+  cursor: pointer;
+}
+.hamburger {
+  width: 100%;
+  height: var(--navbar-height-burger);
+  position: fixed;
+  z-index: 900;
+  background-color: var(--background-color-site);
+  display: none;
+  grid-template-columns: 1fr;
+  grid-template-areas: "burger-menu" "burger-wcag";
+  top: var(--navbar-height);
+}
+.burger-menu {
+  grid-area: burger-menu;
+  width: 100%;
+  height: calc((100vh - 30vh) - var(--navbar-height));
+  display: flex;
+}
+.burger-menu ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items:center;
+  border-top: 2px solid var(--background-color-site);
+  border-bottom: 2px solid var(--background-color-site);
+}
+.burger-menu ul li {
+  width: fit-content;
+  padding-top: calc(var(--space-l) / 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family-Montserrat-400);
+  font-size: var(--font-size-h3);
+}
+.burger-menu ul li span {
+  font-family: var(--font-family-Orbitron-500);
+}
+.burger-menu ul li a {
+  height: 100%;
+  position: relative;
+  font-family: var(--font-family-Montserrat-400);
+  text-transform: uppercase; 
+}
+.burger-wcag {
+  grid-area: burger-wcag;
+  width: 100%;
+  height: calc((100vh - 70vh) - var(--navbar-height));
+  padding-top: calc(var(--space-l) / 2);
+  font-family: var(--font-family-Montserrat-400);
+  font-size: var(--font-size-h2);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.burger-wcag .napis {
+  font-family: var(--font-family-Montserrat-400);
+  font-size: var(--font-size-h3);
+}
+.wcag21-roz ul li, .wcag21-kon ul li {
+  font-size: var(--font-size-h3);
+}
+.wcag21-kon ul li img {
+padding-top: calc(var(--space-l) / 8);
+width: var(--font-size-h3);
+height: var(--font-size-h3);
+}
+/* koniec nav strona */
+/* slajd start */
+.slajd {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.slajd-text {
+  margin-top: .2vw;
+  flex-direction: column;
+  text-align: center;
+  line-height: var(--font-size-h5);
+  font-size: var(--font-size-h5);
+}
+.slajd-text .static-text, .slajd-text .static-text span, .dynamic-text, .dynamic-text li {
+  font-size: var(--font-size-h5);
+}
+.slajd-text .dynamic-text {
+  line-height: var(--font-size-h5);
+  height: var(--font-size-h5);
+}
+@keyframes next-text {
+  100% {
+    top: calc(var(--font-size-h5) * -4);
+  }
+}
+@keyframes dynamic-text {
+  100% {
+    left: calc(100% + var(--font-size-h5));
+  }
+}
+.opis-slajd p {
+  font-size: var(--font-size-h5);
+  margin: .2vw 0;
+  width: fit-content;
+}
+/* slajd koniec */
+/* geneza ec53 start  */
+.geneza-ec53 {
+  margin-top: calc( var(--space-l) / 4);
+}
+.geneza-ec53-areas1, .geneza-ec53-areas2 {
+  grid-template-columns: repeat(1, minmax(480px, 1fr));
+}
+.geneza-ec53-areas1 {
+  display: flex;
+  flex-direction: column;
+}
+.geneza-ec53-areas2 {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.geneza-artykul {
+  height: fit-content;
+}
+.geneza-artykul header {
+  text-align: center;
+  align-items: center;
+}
+.geneza-artykul-col-span2 {
+  grid-column: 1;
+  align-items: center;
+}
+.geneza-foto figure img {
+  margin-top: calc( var(--space-l) / 2);;
+}
+/* geneza ec53 start  */
+/* dane ec53 start */
+.dane-info {
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ltyp-status {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(240px, 1fr));
+}
+.dane-ec53-nazwa-wpis .tel {
+  display: block;
+  }
+.geneza-logo-animacja, .dane-ec53-nazwa-wpis .tel320 {
+  display: none;
+}
+/* dane ec53 koniec */
+/* start kart kategorie */
+.card-rowInfo {
+  padding: 2rem;
+  width: 100%;
+  height: fit-content;
+}
+.cardInfo {
+  margin: 4rem 0;
+  width: 240px;
+  height: 150px;
+}
+.cardInfo:hover {
+  height: 300px;
+}
+.cardInfo .lines::before {
+  width: 240px;
+  height: 300px;
+}
+.cardInfo .imgBx {
+  width: 150px;
+  height: 150px;
+}
+.cardInfo:hover .imgBx {
+  width: 100px;
+  height: 100px;
+}
+.cardInfo .imgBx::before {
+  width: 240px;
+  height: 300px;
+}
+.cardInfo:hover .imgBx figure {
+  opacity: 1;
+  width: 80px;
+}
+.cardInfo:hover .imgBx img {
+  width: 80px;
+  height: 80px;
+}
+.cardInfo .textCard .view {
+  transform: translateY(100px);
+}
+/* koniec kart kategorie */
+/* start intro galeria */
+.glleria-intro {
+  margin-top: var(--navbar-height);
+  flex-direction: column;
+  gap: 10vh;
+}
+/* koniec intro galeria */
+/* start kooperacja  */
+.kooperacja {
+  flex-direction: column;
+  gap: var(--space-l);
+}
+/* koniec kooperacja  */
+/* start dane adres */
+.address {
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas: "kontak-img" "kontakt-dane";
+}
+address b {
+  font-size: var(--font-size-header-h2);
+  text-align: center;
+}
+.kontak-img {
+  grid-area: kontak-img;
+  display: flex;
+  justify-content: center;
+}
+.kontakt-dane,
+.kontakt-dane .email a {
+  font-size: var(--font-size-header-h3);
+  text-align: center;
+}
+/* koniec dane adres */
+/******************* social media **********/
+.social-media {
+  margin: calc(var(--space-l) * 10 + var(--navbar-height)) 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.social-media ul {
+  flex-direction: column;
+}
+.social-media li {
+  list-style: none;
+  margin: 30px 40px;
+}
+/******************* social media koniec **********/
+/* start footer */
+.footer-sitemap {
+  flex-direction: column-reverse;
+  justify-content: start;
+  align-items: center;
+}
+.footer-sitemap ul:nth-child(1),
+.footer-sitemap ul:nth-child(2),
+.footer-sitemap ul:nth-child(3){
+  flex-basis: 320px;
+}
+.footer-sitemap ul:nth-child(4) li p {
+  font-family: var(--font-family-Montserrat-400);
+  text-transform: none;
+}
+.footer-sitemap ul li {
+  padding: calc(var(--space-l) / 3)  0;
+  text-align: center;
+}
+.footer-sitemap ul li span {
+  font-size: var(--font-size-h2);
+}
+.patronite-img {
+  width: 220px;
+  height: 219px;
+}
+.section-copy {
+  width: 100%;
+  padding-top: var(--space-l);
+}
+.section-copy ul {
+  flex-direction: column;
+  text-align: center;
+}
+/* koniec footer */
+}
+@media (min-width: 320px) and (max-width: 411.98px) {
+  :root {  --font-size-site: 10px; 
+    --navbar-height-burger: calc(100vh - var(--navbar-height));
+    --width-galeria-img: 320px;
+    --height-galeria-img: 240px;
+    --patronite-img: url(/assets/templates/images/logo/patronite-320.webp);
+    --galeria-wycieczki: url(/assets/templates/images/galeria/wycieczki-klas-spodek-katowice-esl-pga-poznan320x240.webp);
+    --galeria-turnieje: url(/assets/templates/images/galeria/turniej-mistrzostw-polski-klas-e-sportowych320x240.webp);
+    --galeria-eventy: url(/assets/templates/images/galeria/eventy-organizowane-w-jasle320x240.webp);
+    --slajd-background-img: url(/assets/templates/images/loga-e-sports-games-tel.webp);
+  }
+  .container { width: 100%; margin: 0;}
+  .btn a { width: 310px; }
+  h1 span {  font-size: calc(var(--font-size-h1) + .19em); }
+  h2 span {  font-size: var(--font-size-h2); }
+  .shadow { text-shadow: var(--header-text-shadow1); }
+  .shadow-h3 { text-shadow: var(--header-text-shadow-21); }
+/* start nav strona */
+.header-nav-menu { display: none; }
+.header-nav { padding: 0 calc(var(--space-l) / 2); }
+.header-nav-logo figure img { width: 100%; }
+.burger-menu-btn {
+  display: block;
+  width: calc(var(--navbar-height) - var(--space-l));
+  height: calc(var(--navbar-height) - var(--space-l));
+  background-image: url(/assets/templates/icon/burger-bily.webp), url(/assets/templates/icon/close.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center, center left var(--navbar-height);
+  cursor: pointer;
+}
+.hamburger {
+  width: 100%;
+  height: var(--navbar-height-burger);
+  position: fixed;
+  z-index: 900;
+  background-color: var(--background-color-site);
+  display: none;
+  grid-template-columns: 1fr;
+  grid-template-areas: "burger-menu" "burger-wcag";
+  top: var(--navbar-height);
+}
+.burger-menu {
+  grid-area: burger-menu;
+  width: 100%;
+  height: calc(100vh - var(--navbar-height));
+  display: flex;
+}
+.burger-menu ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  border-top: 2px solid var(--background-color-site);
+  border-bottom: 2px solid var(--background-color-site);
+}
+.burger-menu ul li {
+  width: fit-content;
+  padding-top: calc(var(--space-l) / 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family-Montserrat-400);
+  font-size: var(--font-size-h2);
+}
+.burger-menu ul li span {
+  font-family: var(--font-family-Orbitron-500);
+}
+.burger-menu ul li a {
+  height: 100%;
+  position: relative;
+  font-family: var(--font-family-Montserrat-400);
+  text-transform: uppercase; 
+}
+.burger-wcag { display: none;}
+/* koniec nav strona */
+/* slajd start */
+.slajd {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.slajd-text {
+  margin-top: .2vw;
+  flex-direction: column;
+  text-align: center;
+  line-height: var(--font-size-h5);
+  font-size: var(--font-size-h5);
+}
+.slajd-text .static-text, .slajd-text .static-text span, .dynamic-text, .dynamic-text li {
+  font-size: var(--font-size-h5);
+}
+.slajd-text .dynamic-text {
+  line-height: var(--font-size-h5);
+  height: var(--font-size-h5);
+}
+@keyframes next-text {
+  100% {
+    top: calc(var(--font-size-h5) * -4);
+  }
+}
+@keyframes dynamic-text {
+  100% {
+    left: calc(100% + var(--font-size-h5));
+  }
+}
+.opis-slajd p {
+  width: fit-content;
+}
+/* slajd koniec */
+/* geneza ec53 start  */
+.geneza-ec53 {
+  margin-top: calc( var(--space-l) / 4);
+}
+.geneza-ec53-areas1, .geneza-ec53-areas2 {
+  grid-template-columns: repeat(1, minmax(480px, 1fr));
+}
+.geneza-ec53-areas1 {
+  display: flex;
+  flex-direction: column;
+}
+.geneza-ec53-areas2 {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.geneza-artykul {
+  height: fit-content;
+}
+.geneza-artykul header {
+  text-align: center;
+  align-items: center;
+}
+.geneza-artykul-col-span2 {
+  grid-column: 1;
+  align-items: center;
+}
+.geneza-foto figure img {
+  margin-top: calc( var(--space-l) / 2);;
+}
+/* geneza ec53 start  */
+/* dane ec53 start */
+.dane-info {
+  flex-direction: column;
+  justify-content: space-between;
+}
+.dane-ec53-nazwa-wpis .tel320 {
+  display: block;
+  }
+.geneza-logo-animacja, .dane-ec53-nazwa-wpis .tel {
+  display: none;
+}
+/* dane ec53 koniec */
+/* start kart kategorie */
+.card-rowInfo {
+  padding: 2rem;
+  width: 100%;
+  height: fit-content;
+}
+.cardInfo {
+  margin: 4rem 0;
+  width: 320px;
+  height: 150px;
+}
+.cardInfo:hover {
+  height: 300px;
+}
+.cardInfo .lines::before {
+  width: 320px;
+  height: 300px;
+}
+.cardInfo .imgBx {
+  width: 150px;
+  height: 150px;
+}
+.cardInfo:hover .imgBx {
+  width: 100px;
+  height: 100px;
+}
+.cardInfo .imgBx::before {
+  width: 320px;
+  height: 300px;
+}
+.cardInfo:hover .imgBx figure {
+  opacity: 1;
+  width: 80px;
+}
+.cardInfo:hover .imgBx img {
+  width: 80px;
+  height: 80px;
+}
+.cardInfo .textCard .view {
+  transform: translateY(100px);
+}
+/* koniec kart kategorie */
+/* start intro galeria */
+.glleria-intro {
+  margin-top: var(--navbar-height);
+  flex-direction: column;
+  gap: var(--space-l) ;
+}
+/* koniec intro galeria */
+/* start kooperacja  */
+.kooperacja {
+  flex-direction: column;
+  gap: var(--space-l);
+}
+/* koniec kooperacja  */
+/* start dane adres */
+.address {
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas: "kontak-img" "kontakt-dane";
+}
+address b {
+  font-size: var(--font-size-header-h2);
+  text-align: center;
+}
+.kontak-img {
+  grid-area: kontak-img;
+  display: flex;
+  justify-content: center;
+}
+.kontakt-dane,
+.kontakt-dane .email a {
+  font-size: var(--font-size-header-h3);
+  text-align: center;
+}
+/* koniec dane adres */
+/******************* social media **********/
+.social-media {
+  margin: calc(var(--space-l) * 6) 0 var(--space-l) 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.social-media ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.social-media li {
+  list-style: none;
+  margin: 30px 31px;
+}
+/******************* social media koniec **********/
+/* start footer */
+.footer-sitemap {
+  flex-direction: column-reverse;
+  justify-content: start;
+  align-items: center;
+}
+.footer-sitemap ul:nth-child(1),
+.footer-sitemap ul:nth-child(2),
+.footer-sitemap ul:nth-child(3){
+  flex-basis: 200px;
+}
+.footer-sitemap ul:nth-child(4) li p {
+  font-family: var(--font-family-Montserrat-400);
+  text-transform: none;
+}
+.footer-sitemap ul li {
+  font-size: var(--font-size-h2);
+  padding: calc(var(--space-l) / 2)  0;
+  text-align: center;
+}
+.footer-sitemap ul li span {
+  font-size: var(--font-size-h2);
+}
+.patronite-img {
+  width: 320px;
+  height: 106px;
+}
+.section-copy {
+  width: 100%;
+  padding-top: var(--space-l);
+}
+.section-copy ul {
+  flex-direction: column;
+  text-align: center;
+}
+/* koniec footer */
+}
+@media (min-width: 412px) and (max-width: 599.98px) {
+  :root {  --font-size-site: 12px; 
+    --navbar-height-burger: calc(100vh - var(--navbar-height));
+    --width-galeria-img: 410px;
+    --height-galeria-img: 290px;
+    --patronite-img: url(/assets/templates/images/logo/patronite-400.webp);
+    --galeria-wycieczki: url(/assets/templates/images/galeria/wycieczki-klas-spodek-katowice-esl-pga-poznan480x360.webp);
+    --galeria-turnieje: url(/assets/templates/images/galeria/turniej-mistrzostw-polski-klas-e-sportowych480x360.webp);
+    --galeria-eventy: url(/assets/templates/images/galeria/eventy-organizowane-w-jasle480x360.webp);
+    --slajd-background-img: url(/assets/templates/images/loga-e-sports-games-tel.webp);
+  }
+  .container { width: 100%; margin: 0;}
+  .shadow { text-shadow: var(--header-text-shadow1); }
+  .shadow-h3 { text-shadow: var(--header-text-shadow-21); }
+  /* start nav strona */
+.header-nav-menu { display: none; }
+.header-nav { padding: 0 calc(var(--space-l) / 2); }
+.header-nav-logo figure img { width: 100%; }
+.burger-menu-btn {
+  display: block;
+  width: calc(var(--navbar-height) - var(--space-l));
+  height: calc(var(--navbar-height) - var(--space-l));
+  background-image: url(/assets/templates/icon/burger-bily.webp), url(/assets/templates/icon/close.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center, center left var(--navbar-height);
+  cursor: pointer;
+}
+.hamburger {
+  width: 100%;
+  height: var(--navbar-height-burger);
+  position: fixed;
+  z-index: 900;
+  background-color: var(--background-color-site);
+  display: none;
+  grid-template-columns: 1fr;
+  grid-template-areas: "burger-menu" "burger-wcag";
+  top: var(--navbar-height);
+}
+.burger-menu {
+  grid-area: burger-menu;
+  width: 100%;
+  height: calc(100vh - var(--navbar-height));
+  display: flex;
+}
+.burger-menu ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  border-top: 2px solid var(--background-color-site);
+  border-bottom: 2px solid var(--background-color-site);
+}
+.burger-menu ul li {
+  width: fit-content;
+  border-top: 2px solid var(--background-color-site);
+  padding-top: calc(var(--space-l) / 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family-Montserrat-400);
+  font-size: var(--font-size-h2);
+}
+.burger-menu ul li span {
+  font-family: var(--font-family-Orbitron-500);
+}
+.burger-menu ul li a {
+  height: 100%;
+  position: relative;
+  font-family: var(--font-family-Montserrat-400);
+  text-transform: uppercase; 
+}
+.burger-wcag { display: none;}
+/* koniec nav strona */
+/* slajd start */
+.slajd-text {
+  margin-top: 2vw;
+  text-align: center;
+  line-height: var(--font-size-h3);
+  font-size: var(--font-size-h3);
+}
+.slajd-text .static-text, .slajd-text .static-text span, .dynamic-text, .dynamic-text li {
+  font-size: var(--font-size-h3);
+}
+.slajd-text .dynamic-text {
+  line-height: var(--font-size-h3);
+  height: var(--font-size-h3);
+}
+@keyframes next-text {
+  100% {
+    top: calc(var(--font-size-h3) * -4);
+  }
+}
+@keyframes dynamic-text {
+  100% {
+    left: calc(100% + var(--font-size-h3));
+  }
+}
+.opis-slajd p {
+  width: fit-content;
+}
+/* slajd koniec */
+/* geneza ec53 start  */
+.geneza-ec53 {
+  margin-top: calc( var(--space-l) / 4);
+}
+.geneza-ec53-areas1, .geneza-ec53-areas2 {
+  grid-template-columns: repeat(1, minmax(480px, 1fr));
+}
+.geneza-ec53-areas1 {
+  display: flex;
+  flex-direction: column;
+}
+.geneza-ec53-areas2 {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.geneza-artykul {
+  height: fit-content;
+}
+.geneza-artykul header {
+  text-align: center;
+  align-items: center;
+}
+.geneza-artykul-col-span2 {
+  grid-column: 1;
+  align-items: center;
+}
+.geneza-foto figure img {
+  margin-top: calc( var(--space-l) / 2);;
+}
+/* geneza ec53 start  */
+/* dane ec53 start */
+.dane-info {
+  flex-direction: column;
+  justify-content: space-between;
+}
+.geneza-logo-animacja, .dane-ec53-nazwa-wpis .tel {
+  display: none;
+}
+/* dane ec53 koniec */
+/* start kart kategorie */
+.card-rowInfo {
+  padding: .4rem;
+  width: 100%;
+  height: fit-content;
+}
+.cardInfo {
+  margin-top: calc(var(--space-l) * 2);
+}
+.cardInfo .textCard .view h4 {
+  margin-bottom: calc(var(--space-l) * 2);
+}
+/* koniec kart kategorie */
+/* start intro galeria */
+.glleria-intro {
+  margin-top: var(--navbar-height);
+  flex-direction: column;
+  gap: var(--space-l) ;
+}
+/* koniec intro galeria */
+/* start kooperacja  */
+.kooperacja {
+  flex-direction: column;
+  gap: var(--space-l);
+}
+/* koniec kooperacja  */
+/* start dane adres */
+.address {
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas: "kontak-img" "kontakt-dane";
+}
+address b {
+  font-size: var(--font-size-header-h2);
+  text-align: center;
+}
+.kontak-img {
+  grid-area: kontak-img;
+  display: flex;
+  justify-content: center;
+}
+.kontakt-dane,
+.kontakt-dane .email a {
+  font-size: var(--font-size-header-h3);
+  text-align: center;
+}
+/* koniec dane adres */
+/******************* social media **********/
+.social-media {
+  margin: calc(var(--space-l) * 4) 0 var(--space-l) 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.social-media ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.social-media li {
+  list-style: none;
+  margin: 30px 36px;
+}
+/******************* social media koniec **********/
+/* start footer */
+.footer-sitemap {
+  flex-direction: column-reverse;
+  justify-content: start;
+  align-items: center;
+}
+.footer-sitemap ul:nth-child(1),
+.footer-sitemap ul:nth-child(2),
+.footer-sitemap ul:nth-child(3){
+  flex-basis: 200px;
+}
+.footer-sitemap ul:nth-child(4) li p {
+  font-family: var(--font-family-Montserrat-400);
+  text-transform: none;
+}
+.footer-sitemap ul li {
+  padding: calc(var(--space-l) / 3)  0;
+  text-align: center;
+}
+.footer-sitemap ul li span {
+  font-size: var(--font-size-h2);
+}
+.patronite-img {
+  width: 400px;
+  height: 132px;
+}
+.section-copy {
+  width: 100%;
+  padding-top: var(--space-l);
+}
+.section-copy ul {
+  flex-direction: column;
+  text-align: center;
+}
+/* koniec footer */
+}
+@media (min-width: 600px) and (max-width: 799.98px) {
+  :root {  --font-size-site: 12px;
+    --navbar-height-burger: calc(100vh - var(--navbar-height)); 
+    --width-galeria-img: 410px;
+    --height-galeria-img: 290px;
+    --patronite-img: url(/assets/templates/images/logo/patronite-400.webp);
+    --galeria-wycieczki: url(/assets/templates/images/galeria/wycieczki-klas-spodek-katowice-esl-pga-poznan480x360.webp);
+    --galeria-turnieje: url(/assets/templates/images/galeria/turniej-mistrzostw-polski-klas-e-sportowych480x360.webp);
+    --galeria-eventy: url(/assets/templates/images/galeria/eventy-organizowane-w-jasle480x360.webp);
+    --slajd-background-img: url(/assets/templates/images/loga-e-sports-games-tlo-czarne2560x1440.webp);
+  }
+  .container { width: 100%; margin: 0;}
+  .shadow { text-shadow: var(--header-text-shadow1); }
+  .shadow-h3 { text-shadow: var(--header-text-shadow-21); }
+  /* start nav strona */
+.header-nav-menu { display: none; }
+.header-nav { padding: 0 calc(var(--space-l) ); }
+.header-nav-logo figure img { width: 100%; }
+.burger-menu-btn {
+  display: block;
+  width: calc(var(--navbar-height) - var(--space-l));
+  height: calc(var(--navbar-height) - var(--space-l));
+  background-image: url(/assets/templates/icon/burger-bily.webp), url(/assets/templates/icon/close.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center, center left var(--navbar-height);
+  cursor: pointer;
+}
+.hamburger {
+  width: 100%;
+  height: var(--navbar-height-burger);
+  position: fixed;
+  z-index: 900;
+  background-color: var(--background-color-site);
+  display: none;
+  grid-template-columns: 1fr;
+  grid-template-areas: "burger-menu" "burger-wcag";
+  top: var(--navbar-height);
+}
+.burger-menu {
+  grid-area: burger-menu;
+  width: 100%;
+  height: calc(100vh - var(--navbar-height));
+  display: flex;
+}
+.burger-menu ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items:center;
+  border-top: 2px solid var(--background-color-site);
+  border-bottom: 2px solid var(--background-color-site);
+}
+.burger-menu ul li {
+  width: fit-content;
+  padding-top: calc(var(--space-l) / 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family-Montserrat-400);
+  font-size: var(--font-size-h2);
+}
+.burger-menu ul li span {
+  font-family: var(--font-family-Orbitron-500);
+}
+.burger-menu ul li a {
+  height: 100%;
+  position: relative;
+  font-family: var(--font-family-Montserrat-400);
+  text-transform: uppercase; 
+}
+.burger-wcag { display: none;}
+/* koniec nav strona */
+/* slajd start */
+.slajd-text {
+  text-align: center;
+}
+.opis-slajd p {
+  width: fit-content;
+}
+/* slajd koniec */
+/* geneza ec53 start  */
+.geneza-ec53 {
+  margin-top: calc( var(--space-l) / 4);
+}
+.geneza-ec53-areas1, .geneza-ec53-areas2 {
+  grid-template-columns: repeat(1, minmax(480px, 1fr));
+}
+.geneza-ec53-areas1 {
+  display: flex;
+  flex-direction: column;
+}
+.geneza-ec53-areas2 {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.geneza-artykul {
+  height: fit-content;
+}
+.geneza-artykul header {
+  text-align: center;
+  align-items: center;
+}
+.geneza-artykul-col-span2 {
+  grid-column: 1;
+  align-items: center;
+}
+.geneza-foto figure img {
+  margin-top: calc( var(--space-l) / 2);;
+}
+/* geneza ec53 start  *//* dane ec53 start */
+.dane-info {
+  flex-direction: column;
+  justify-content: space-between;
+}
+.geneza-logo-animacja, .dane-ec53-nazwa-wpis .tel {
+  display: none;
+}
+/* dane ec53 koniec */
+/* start kart kategorie */
+.card-rowInfo {
+  padding: .4rem;
+  width: 100%;
+  height: fit-content;
+}
+.cardInfo {
+  margin-top: calc(var(--space-l) * 2);
+}
+.cardInfo .textCard .view h4 {
+  margin-bottom: calc(var(--space-l) * 2);
+}
+/* koniec kart kategorie */
+/* start intro galeria */
+.glleria-intro {
+  margin-top: var(--navbar-height);
+  flex-direction: column;
+  gap: var(--space-l) ;
+}
+/* koniec intro galeria */
+/* start kooperacja  */
+.kooperacja {
+  flex-direction: column;
+  gap: var(--space-l);
+}
+/* koniec kooperacja  */
+/* start dane adres */
+.address {
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas: "kontak-img" "kontakt-dane";
+}
+address b {
+  font-size: var(--font-size-header-h2);
+  text-align: center;
+}
+.kontak-img {
+  grid-area: kontak-img;
+  display: flex;
+  justify-content: center;
+}
+.kontakt-dane,
+.kontakt-dane .email a {
+  font-size: var(--font-size-header-h3);
+  text-align: center;
+}
+/* koniec dane adres */
+/******************* social media **********/
+.social-media {
+  margin: calc(var(--space-l) * 4) 0 var(--space-l) 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.social-media ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.social-media li {
+  list-style: none;
+  margin: 30px 36px;
+}
+/******************* social media koniec **********/
+/* start footer */
+.footer-sitemap {
+  flex-direction: column-reverse;
+  justify-content: start;
+  align-items: center;
+}
+.footer-sitemap ul:nth-child(1),
+.footer-sitemap ul:nth-child(2),
+.footer-sitemap ul:nth-child(3){
+  flex-basis: 200px;
+}
+.footer-sitemap ul:nth-child(4) li p {
+  font-family: var(--font-family-Montserrat-400);
+  text-transform: none;
+}
+.footer-sitemap ul li {
+  font-size: var(--font-size-h3);
+  padding: calc(var(--space-l) / 3)  0;
+  text-align: center;
+}
+.footer-sitemap ul li span {
+  font-size: var(--font-size-h2);
+}
+.patronite-img {
+  width: 400px;
+  height: 132px;
+}
+.section-copy {
+  width: 100%;
+  padding-top: var(--space-l);
+}
+.section-copy ul {
+  flex-direction: column;
+  text-align: center;
+}
+/* koniec footer */
+}
+@media (min-width: 800px) and (max-width: 1023.98px) {
+  :root {  --font-size-site: 12px;
+    --navbar-height-burger: calc(100vh - var(--navbar-height)); 
+    --width-galeria-img: 410px;
+    --height-galeria-img: 290px;
+    --patronite-img: url(/assets/templates/images/logo/patronite-400.webp);
+    --galeria-wycieczki: url(/assets/templates/images/galeria/wycieczki-klas-spodek-katowice-esl-pga-poznan480x360.webp);
+    --galeria-turnieje: url(/assets/templates/images/galeria/turniej-mistrzostw-polski-klas-e-sportowych480x360.webp);
+    --galeria-eventy: url(/assets/templates/images/galeria/eventy-organizowane-w-jasle480x360.webp);
+    --slajd-background-img: url(/assets/templates/images/loga-e-sports-games-tlo-czarne2560x1440.webp);
+  }
+  .container { width: 100%; margin: 0;}
+  .shadow { text-shadow: var(--header-text-shadow1); }
+  .shadow-h3 { text-shadow: var(--header-text-shadow-21); }
+  /* start nav strona */
+.header-nav-menu { display: none; }
+.header-nav { padding: 0 calc(var(--space-l) ); }
+.header-nav-logo figure img { width: 100%; }
+.burger-menu-btn {
+  display: block;
+  width: calc(var(--navbar-height) - var(--space-l));
+  height: calc(var(--navbar-height) - var(--space-l));
+  background-image: url(/assets/templates/icon/burger-bily.webp), url(/assets/templates/icon/close.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center, center left var(--navbar-height);
+  cursor: pointer;
+}
+.hamburger {
+  width: 100%;
+  height: var(--navbar-height-burger);
+  position: fixed;
+  z-index: 900;
+  background-color: var(--background-color-site);
+  display: none;
+  grid-template-columns: 1fr;
+  grid-template-areas: "burger-menu" "burger-wcag";
+  top: var(--navbar-height);
+}
+.burger-menu {
+  grid-area: burger-menu;
+  width: 100%;
+  height: calc(100vh - var(--navbar-height));
+  display: flex;
+}
+.burger-menu ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items:center;
+  border-top: 2px solid var(--background-color-site);
+  border-bottom: 2px solid var(--background-color-site);
+}
+.burger-menu ul li {
+  width: fit-content;
+  padding-top: calc(var(--space-l) / 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family-Montserrat-400);
+  font-size: var(--font-size-h2);
+}
+.burger-menu ul li span {
+  font-family: var(--font-family-Orbitron-500);
+}
+.burger-menu ul li a {
+  height: 100%;
+  position: relative;
+  font-family: var(--font-family-Montserrat-400);
+  text-transform: uppercase; 
+}
+.burger-wcag { display: none;}
+/* koniec nav strona */
+/* slajd start */
+.slajd-text {
+  text-align: center;
+}
+.opis-slajd p {
+  width: fit-content;
+}
+/* slajd koniec */
+/* geneza ec53 start  */
+.geneza-ec53 {
+  margin-top: calc( var(--space-l) / 4);
+}
+.geneza-ec53-areas1, .geneza-ec53-areas2 {
+  grid-template-columns: repeat(1, minmax(480px, 1fr));
+}
+.geneza-ec53-areas1 {
+  display: flex;
+  flex-direction: column;
+}
+.geneza-ec53-areas2 {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.geneza-artykul {
+  height: fit-content;
+}
+.geneza-artykul header {
+  text-align: center;
+  align-items: center;
+}
+.geneza-artykul-col-span2 {
+  grid-column: 1;
+  align-items: center;
+}
+.geneza-foto figure img {
+  margin-top: calc( var(--space-l) / 2);;
+}
+/* geneza ec53 start  *//* dane ec53 start */
+.dane-info {
+  flex-direction: column;
+  justify-content: space-between;
+}
+.geneza-logo-animacja, .dane-ec53-nazwa-wpis .tel {
+  display: none;
+}
+/* dane ec53 koniec */
+/* start kart kategorie */
+.card-rowInfo {
+  padding: .4rem;
+  width: 100%;
+  height: fit-content;
+}
+.cardInfo {
+  margin-top: calc(var(--space-l) * 2);
+}
+.cardInfo .textCard .view h4 {
+  margin-bottom: calc(var(--space-l) * 2);
+}
+/* koniec kart kategorie */
+/* start intro galeria */
+.glleria-intro {
+  margin-top: var(--navbar-height);
+  flex-direction: column;
+  gap: var(--space-l) ;
+}
+/* koniec intro galeria */
+/* start kooperacja  */
+.kooperacja {
+  flex-direction: column;
+  gap: var(--space-l);
+}
+/* koniec kooperacja  */
+/* start dane adres */
+.address {
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas: "kontak-img" "kontakt-dane";
+}
+address b {
+  font-size: var(--font-size-header-h2);
+  text-align: center;
+}
+.kontak-img {
+  grid-area: kontak-img;
+  display: flex;
+  justify-content: center;
+}
+.kontakt-dane,
+.kontakt-dane .email a {
+  font-size: var(--font-size-header-h3);
+  text-align: center;
+}
+/* koniec dane adres */
+/******************* social media **********/
+.social-media {
+  margin: calc(var(--space-l) * 4) 0 var(--space-l) 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.social-media ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.social-media li {
+  list-style: none;
+  margin: 30px 36px;
+}
+/******************* social media koniec **********/
+/* start footer */
+.footer-sitemap {
+  flex-direction: column-reverse;
+  justify-content: start;
+  align-items: center;
+}
+.footer-sitemap ul:nth-child(1),
+.footer-sitemap ul:nth-child(2),
+.footer-sitemap ul:nth-child(3){
+  flex-basis: 200px;
+}
+.footer-sitemap ul:nth-child(4) li p {
+  font-family: var(--font-family-Montserrat-400);
+  text-transform: none;
+}
+.footer-sitemap ul li {
+  font-size: var(--font-size-h3);
+  padding: calc(var(--space-l) / 3)  0;
+  text-align: center;
+}
+.footer-sitemap ul li span {
+  font-size: var(--font-size-h2);
+}
+.patronite-img {
+  width: 400px;
+  height: 132px;
+}
+.section-copy {
+  width: 100%;
+  padding-top: var(--space-l);
+}
+/* koniec footer */
+}
+@media (min-width: 1024px) and (max-width: 1279.98px) {
+  :root {  --font-size-site: 11px; 
+    --width-galeria-img: 320px;
+    --height-galeria-img: 240px;
+    --patronite-img: url(/assets/templates/images/logo/patronite-320.webp);
+    --galeria-wycieczki: url(/assets/templates/images/galeria/wycieczki-klas-spodek-katowice-esl-pga-poznan320x240.webp);
+    --galeria-turnieje: url(/assets/templates/images/galeria/turniej-mistrzostw-polski-klas-e-sportowych320x240.webp);
+    --galeria-eventy: url(/assets/templates/images/galeria/eventy-organizowane-w-jasle320x240.webp);
+    --slajd-background-img: url(/assets/templates/images/loga-e-sports-games-tlo-czarne2560x1440.webp);
+  }
+.container { width: 96%; margin: 2%;}
+  /* start kart kategorie */
+.card-rowInfo {
+  padding: .4rem;
+  width: 100%;
+  height: fit-content;
+}
+.cardInfo {
+  margin-top: calc(var(--space-l) * 2);
+}
+.cardInfo .textCard .view h4 {
+  margin-bottom: calc(var(--space-l) * 2);
+}
+/* koniec kart kategorie */
+}
+@media (min-width: 1280px) and (max-width: 1439.98px) {
+  :root {  --font-size-site: 12px; 
+    --width-galeria-img: 400px;
+    --height-galeria-img: 320px;
+    --patronite-img: url(/assets/templates/images/logo/patronite-320.webp);
+    --galeria-wycieczki: url(/assets/templates/images/galeria/wycieczki-klas-spodek-katowice-esl-pga-poznan320x240.webp);
+    --galeria-turnieje: url(/assets/templates/images/galeria/turniej-mistrzostw-polski-klas-e-sportowych320x240.webp);
+    --galeria-eventy: url(/assets/templates/images/galeria/eventy-organizowane-w-jasle320x240.webp);
+    --slajd-background-img: url(/assets/templates/images/loga-e-sports-games-tlo-czarne2560x1440.webp);
+  }
+.container { width: 96%; margin: 2%;}
+  /* start kart kategorie */
+.card-rowInfo {
+  padding: .4rem;
+  width: 100%;
+  height: fit-content;
+}
+.cardInfo {
+  margin-top: calc(var(--space-l) * 2);
+}
+.cardInfo .textCard .view h4 {
+  margin-bottom: calc(var(--space-l) * 2);
+}
+/* koniec kart kategorie */
+}
+@media (min-width: 1440px) and (max-width: 1919.98px) {
+  :root {  --font-size-site: 14px; 
+    --width-galeria-img: 400px;
+    --height-galeria-img: 320px;
+    --patronite-img: url(/assets/templates/images/logo/patronite-320.webp);
+    --galeria-wycieczki: url(/assets/templates/images/galeria/wycieczki-klas-spodek-katowice-esl-pga-poznan320x240.webp);
+    --galeria-turnieje: url(/assets/templates/images/galeria/turniej-mistrzostw-polski-klas-e-sportowych320x240.webp);
+    --galeria-eventy: url(/assets/templates/images/galeria/eventy-organizowane-w-jasle320x240.webp);
+    --slajd-background-img: url(/assets/templates/images/loga-e-sports-games-tlo-czarne2560x1440.webp);
+  }
+.container { width: 96%; margin: 2%;}
+  /* start kart kategorie */
+.card-rowInfo {
+  padding: .4rem;
+  width: 100%;
+  height: fit-content;
+}
+.cardInfo {
+  margin-top: calc(var(--space-l) * 2);
+}
+.cardInfo .textCard .view h4 {
+  margin-bottom: calc(var(--space-l) * 2);
+}
+/* koniec kart kategorie */
+}
+@media (min-width: 1920px) and (max-width: 2559.98px) {
+  :root {  --font-size-site: 16px; 
+  }
+.container { width: 90%; margin: 0 5% 0 5%;}
+}
