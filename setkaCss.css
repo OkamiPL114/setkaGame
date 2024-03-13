@@ -1,12 +1,14 @@
-@font-face { font-family: 'Montserrat-ExtraLight200'; src: url(/assets/templates/font/Montserrat/Montserrat-ExtraLight.ttf) format('truetype');font-display: fallback;}
-@font-face { font-family: 'Montserrat-Regular400'; src: url(/assets/templates/font/Montserrat/Montserrat-Regular.ttf) format('truetype'); font-display: fallback;}
-@font-face { font-family: 'Orbitron-Medium500'; src: url(/assets/templates/font/Orbitron/Orbitron-Medium.ttf) format('truetype');font-display: fallback;}
-@font-face { font-family: 'Orbitron-Bold700'; src: url(/assets/templates/font/Orbitron/Orbitron-Bold.ttf) format('truetype');font-display: fallback;}
+@font-face { font-family: 'Oswald-ExtraLight200'; src: url('/czcionka/static/Oswald-ExtraLight.ttf') format('truetype'); font-display: fallback;}
+@font-face { font-family: 'Oswald-Light300'; src: url('/czcionka/static/Oswald-Light.ttf') format('truetype'); font-display: fallback;}
+@font-face { font-family: 'Oswald-Regular400'; src: url('/czcionka/static/Oswald-Regular.ttf') format('truetype'); font-display: fallback;}
+@font-face { font-family: 'Oswald-Medium500'; src: url('/czcionka/static/Oswald-Medium.ttf') format('truetype'); font-display: fallback;}
+@font-face { font-family: 'Oswald-SemiBold600'; src: url('/czcionka/static/Oswald-SemiBold.ttf') format('truetype'); font-display: fallback;}
+@font-face { font-family: 'Oswald-Bold700'; src: url('/czcionka/static/Oswald-Bold.ttf') format('truetype'); font-display: fallback;}
 :root{
-    --font-family-Montserrat-200: 'Montserrat-ExtraLight200';
-    --font-family-Montserrat-400: 'Montserrat-Regular400';
-    --font-family-Orbitron-500: 'Orbitron-Medium500';
-    --font-family-Orbitron-700: 'Orbitron-Bold700';
+    --font-family-Oswald-200: 'Oswald-ExtraLight200';
+    --font-family-Oswald-400: 'Oswald-Regular400';
+    --font-family-Oswald-500: 'Oswald-Medium500';
+    --font-family-Oswald-700: 'Oswald-Bold700';
     --font-size-site: 18px;
     --font-size: clamp(1.2rem, 0.4vw, 2.2rem);
     --font-size-h6: clamp(1.21rem, 0.65vw, 1rem);
@@ -25,16 +27,14 @@
 }
 html {
     font-size: var(--font-size-site);
-  }
+}
 body {
-    font-family: var(--font-family-Montserrat-200);
-  font-size: var(--font-size);
+    font-family: var(--font-family-Oswald-200);
+    font-size: var(--font-size);
     background-color: #1b1b1b;
     color: #e2e2e2;
 }
 button {
-    height: calc(2em + 1vw);
-    margin: calc(2em + 1vw);
     font-size: calc(0.3em + 1vw);
     font-weight: bold;
 }
