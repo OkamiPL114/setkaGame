@@ -6,7 +6,10 @@
     <script src="./setkaJs.js"></script>
 </head>
 <body>
-    <h1 class="header">Setka game</h1>
+    <div id="topBar">
+        <h4 class="headerName">💯Setka game</h4>
+        <button id="logInButton">zaloguj się</button>
+    </div>
     <p id="timer">Czas: 0 sekund</p>
     <div id="startButtons">
         <button class="startButton" onclick="rozpocznijGre(100)">Graj 1 - 100</button>
@@ -16,8 +19,9 @@
     </div>
     <div id="liczby"></div>
     <div id="wynik"></div>
-
-    <!--
+</body>
+</html>
+<!--
 
 
         
@@ -63,7 +67,3 @@
     
     
     -->
-
-    
-</body>
-</html>
