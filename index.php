@@ -34,7 +34,7 @@
         NA FLEXIE
 
         TODO:
-        leaderboard, logowanie, faktyczny restart strony a nie zwykłe przeładowanie
+        leaderboard, logowanie
     
 
         @font-face {font-family: 'nazwa'; src: url(link)}

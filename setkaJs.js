@@ -12,16 +12,23 @@ function rozpocznijGre(max) {
     let liczbyDiv = document.getElementById("liczby");
 
     switch(maximum){ // ustaw ilość kolumn w zależności od limitu gry
-        case 100: liczbyDiv.style.gridTemplateColumns = "repeat(10, 1fr)";;break;
-        case 50: liczbyDiv.style.gridTemplateColumns = "repeat(5, 1fr)";;break;
-        case 25: liczbyDiv.style.gridTemplateColumns = "repeat(5, 1fr)";;break;
-        case 10: liczbyDiv.style.gridTemplateColumns = "repeat(2, 1fr)";;break;
+        case 100: liczbyDiv.style.gridTemplateColumns = "repeat(10, 1fr)";break;
+        case 50: liczbyDiv.style.gridTemplateColumns = "repeat(5, 1fr)";break;
+        case 25: liczbyDiv.style.gridTemplateColumns = "repeat(5, 1fr)";break;
+        case 10: liczbyDiv.style.gridTemplateColumns = "repeat(2, 1fr)";break;
     }
 
     let timerParagraf = document.getElementById("timer");
     timerParagraf.style.display = "block";
 
-    // Wygeneruj przyciski z liczbami od 1 do 100
+    // usuń poprzednie liczby
+    if(liczby.length > 0){
+        for (let i = 1; i <= max; i++) {
+            liczby.pop(i);
+        }
+    }
+    
+    // Wygeneruj przyciski z liczbami od 1 do 100/50/25/10
     for (let i = 1; i <= max; i++) {
         liczby.push(i);
     }
@@ -33,6 +40,7 @@ function rozpocznijGre(max) {
     startCzas = new Date();
     updateTimer(timerParagraf);
 
+
     // dodaj przyciski do obszaru gry
     for (let i = 0; i < liczby.length; i++) {
         const button = document.createElement("button");
@@ -41,6 +49,7 @@ function rozpocznijGre(max) {
         button.className = "liczba"; // daj każdemu przyciskowi klasę (w razie czego)
         liczbyDiv.appendChild(button);
     }
+    liczbyDiv.style.display = "grid";
 }
 
 // zabezpieczenie przed ctrl + f oraz f12
@@ -100,5 +109,32 @@ function zakonczGre() {
 }
 
 function zagrajPonownie(){
+    // zniknij ekran wyniku i wyczyść go
+    const ekranWyniku = document.getElementById("wynik"); 
     ekranWyniku.style.display = "none";
+    while(ekranWyniku.firstChild) {
+        ekranWyniku.removeChild(ekranWyniku.lastChild);
+    }
+
+    //usuń poprzednie przyciski liczb
+    let liczbyDiv = document.getElementById("liczby");
+    while(liczbyDiv.firstChild) {
+        liczbyDiv.removeChild(liczbyDiv.lastChild);
+    }
+
+    // zniknij czas
+    let timerParagraf = document.getElementById("timer");
+    timerParagraf.style.display = "none";
+
+    // pokaż przyciski Graj
+    let startButtons = document.getElementById("startButtons");
+    startButtons.style.display = "flex";
+    
+    // rozpocznij na nowo odliczanie
+    timerInterval = setInterval(() => {
+        updateTimer(document.getElementById("timer"));
+    }, 1);
+
+    // zacznij liczyć od nowa
+    aktualnaLiczba = 1;
 }
