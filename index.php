@@ -28,43 +28,11 @@
     <div id="wynik"></div>
 </body>
 </html>
+<?php
+    
+?>
+
 <!--
-
-        RESPONSYWNOŚĆ BEZ FLOAT:LEFT -ów !!!!!!!!!!!!!!!!!!!!!!!!!!!
-        NA FLEXIE
-
-        TODO:
-        leaderboard, logowanie
-    
-
-        @font-face {font-family: 'nazwa'; src: url(link)}
-        root{
-            --font-family-nazwa: 'nazwa';
-            --font-size-site: 18px;
-            --font-size: clamp(1.2rem, 0.4vw, 2.2rem);
-            --font-size-h6: clamp(1.21rem, 0.65vw, 1rem);
-            --font-size-h5: clamp(1.25rem, 0.95vw, 1.2rem);
-            --font-size-h4: clamp(1.3rem, 1.2vw, 1.4rem);
-            --font-size-h3: clamp(1.4rem, 3.8vw, 1.8rem);
-            --font-size-h2: clamp(1.6rem, 4.2vw, 2.66rem);
-            --font-size-h1: clamp(2.1rem, 8.4vw, 7.73rem);
-        }
-        
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html{
-            font-size: var(--font-size-site);
-        }
-        body{
-            font-family: var(--font-family-nazwa);
-            font-size: var(--font-size);
-            display: flex;
-        }
-    
-    -->
+    TODO:
+    leaderboard, logowanie
+-->
