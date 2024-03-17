@@ -2,13 +2,20 @@
 <html>
 <head>
     <title>Setka game</title>
-    <link rel="stylesheet" href="setkaCss.css">
+    <link rel="stylesheet" type="text/css" href="setkaCss.css" >
     <script src="./setkaJs.js"></script>
 </head>
 <body>
     <div id="topBar">
-        <h4 class="headerName">💯Setka game</h4>
-        <button id="logInButton">zaloguj się</button>
+        <div id="leaderboardDiv" onclick="">
+            <p id="leaderboardIcon">🏆</p>
+            <p id="leaderboardText">Tabela najlepszych wyników</p>
+        </div>
+        <h4 id="headerName">💯Setka game</h4>
+        <div id="logInDiv">
+            <img src="./images/user.png" id="logInIcon"></img>
+            <p id="logInButton">Zaloguj się</p>
+        </div>
     </div>
     <p id="timer">Czas: 0 sekund</p>
     <div id="startButtons">
