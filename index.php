@@ -7,12 +7,12 @@
 </head>
 <body>
     <div id="topBar">
-        <div id="leaderboardDiv" onclick="">
+        <div id="leaderboardDiv" onclick="showLeaderboard()">
             <img src="./images/trophy.png" id="leaderboardIcon"></img>
             <p id="leaderboardText">Wyniki</p>
         </div>
         <h4 id="headerName">💯Setka game</h4>
-        <div id="logInDiv">
+        <div id="logInDiv" onclick="showAccount()">
             <p id="logInText">Konto</p>
             <img src="./images/user.png" id="logInIcon"></img>
         </div>
@@ -26,10 +26,11 @@
     </div>
     <div id="liczby"></div>
     <div id="wynik"></div>
+    <div id="account"></div>
 </body>
 </html>
 <?php
-    
+
 ?>
 
 <!--

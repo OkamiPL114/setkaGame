@@ -120,6 +120,19 @@ button {
     background-color: gray;
 }
 
+/* kod od konta */
+#account {
+    display: none;
+    position: sticky;
+    font-weight: bold;
+    text-align: center;
+    background-color: #1a237e;
+    border: 2px solid black;
+    padding: calc(2rem + 2vw);
+    top: calc(2rem + 2vw);
+    left: calc(2rem + 2vw);
+}
+
 /* responsywność */
 @media(max-width: 510px){
     #logInText, #leaderboardText {
