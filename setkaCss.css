@@ -41,41 +41,68 @@ button {
     font-family: var(--font-family-Oswald-700);
 }
 
+
+/* górny pasek z tabelą, napisem i logowaniem */
 #topBar {
     display: flex;
     justify-content: space-evenly;
     background-color: #1a237e;
+    margin-bottom: 10px;
+}
+#leaderboardDiv {
+    display: flex;
+    background-color: gold;
+    padding: 5px;
+}
+#leaderboardIcon {
+    align-self: center;
+    width: calc(2rem + 1vw);
+    height: calc(2rem + 1vw);
+}
+#leaderboardText {
+    font-size: calc(1rem + 1vw);
+    color: black;
+    align-self: center;
 }
 #headerName {
-    font-size: var(--font-size-h2);
+    font-size: calc(var(--font-size-h2) + 1vw);
     text-align: center;
     flex-grow: 1;
 }
 #logInDiv {
+    background-color: aqua;
+    padding: 5px;
     display: flex;
 }
 #logInIcon {
-    width: 100px;
+    align-self: center;
+    width: calc(2rem + 1vw);
+    height: calc(2rem + 1vw);
 }
-#logInButton {
-    padding: 0px;
-    margin: 0px;
+#logInText {
+    color: black;
+    font-size: calc(1rem + 1vw);
+    align-self: center;
 }
 
+
+/* styl od faktycznej rozgrywki*/
 #timer {
     display: none;
     text-align: center;
 }
 .startButton{
-    padding: 1em;
+    padding: calc(0.5rem + 1vw);
 }
 #startButtons {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 #liczby {
     display: none;
     display: grid;
+    justify-content: space-between;
     align-items: center;
 }
 #wynik {
@@ -92,4 +119,19 @@ button {
 }
 .klikniety {
     background-color: gray;
+}
+
+/* responsywność */
+@media(max-width: 510px){
+    #logInText, #leaderboardText {
+        display: none;
+    }
+}
+@media(max-width: 300px){
+    #startButtons {
+        gap: 50px;
+    }
+    #headerName {
+        font-size: calc(var(--font-size-h2) + 0.5vw);
+    }
 }

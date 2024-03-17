@@ -8,13 +8,13 @@
 <body>
     <div id="topBar">
         <div id="leaderboardDiv" onclick="">
-            <p id="leaderboardIcon">🏆</p>
-            <p id="leaderboardText">Tabela najlepszych wyników</p>
+            <img src="./images/trophy.png" id="leaderboardIcon"></img>
+            <p id="leaderboardText">Wyniki</p>
         </div>
         <h4 id="headerName">💯Setka game</h4>
         <div id="logInDiv">
+            <p id="logInText">Konto</p>
             <img src="./images/user.png" id="logInIcon"></img>
-            <p id="logInButton">Zaloguj się</p>
         </div>
     </div>
     <p id="timer">Czas: 0 sekund</p>
@@ -29,10 +29,6 @@
 </body>
 </html>
 <!--
-
-
-        
-
 
         RESPONSYWNOŚĆ BEZ FLOAT:LEFT -ów !!!!!!!!!!!!!!!!!!!!!!!!!!!
         NA FLEXIE
@@ -70,7 +66,5 @@
             font-size: var(--font-size);
             display: flex;
         }
-    
-    
     
     -->
