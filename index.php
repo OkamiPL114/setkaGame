@@ -27,13 +27,28 @@
     <div id="liczby"></div>
     <div id="wynik"></div>
     <div id="account"></div>
+    <div id="leaderboard">
+        <?php
+            $db = new mysqli('localhost', 'root', '', 'setkaGame');
+            if(mysqli_connect_error())
+            {
+                echo "Błąd bazy danych";
+            }
+
+            $q100 = "SELECT * FROM scores WHERE gameType=100 ORDER BY scoreTime";
+            $q50 = "SELECT * FROM scores WHERE gameType=50 ORDER BY scoreTime";
+            $q25 = "SELECT * FROM scores WHERE gameType=25 ORDER BY scoreTime";
+            $q10 = "SELECT * FROM scores WHERE gameType=10 ORDER BY scoreTime";
+            $result100 = $db->query($q100);
+            $result50 = $db->query($q50);
+            $result25 = $db->query($q25);
+            $result10 = $db->query($q10);
+        ?>
+        <table>
+            <tr>
+                
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
-<?php
-
-?>
-
-<!--
-    TODO:
-    leaderboard, logowanie
--->
