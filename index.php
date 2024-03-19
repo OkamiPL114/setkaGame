@@ -98,40 +98,6 @@
                 echo "<p>Brak wyników dla gry 1 - 10</p>";
             }
         ?>
-        
-        <!-- 
-            <table>
-                <tr>
-                    <th>Gracz</th>
-                    <th>Wynik</th>
-                </tr>
-
-                <?php
-                        /*$servername = "localhost";
-                        $username = "root";
-                        $password = "";
-                        $dbname = "snake";
-                        $conn = mysqli_connect($servername, $username, $password, $dbname);
-                
-                    if (!$conn) {
-                        die("Connection failed: " . mysqli_connect_error());
-                    }
-                
-                    $sql ="SELECT login, punkty FROM wynik INNER JOIN uzytkownicy ON uzytkownicy.id=wynik.id_uzytkownika ORDER BY punkty DESC LIMIT 10;";
-                    $result = $conn -> query($sql);
-                    $conn->close();
-                    if ($result->num_rows > 0) {
-                        while($row = $result->fetch_assoc()) {
-                        echo "<tr>";
-                        echo "<td>".$row["login"]."</td>";
-                        echo "<td>".$row["punkty"]."</td>";
-                        echo "</tr>";
-                        }
-                    }*/
-                ?>
-
-            </table>
-        -->
     </div>
 </body>
 </html>
