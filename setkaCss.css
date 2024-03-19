@@ -40,7 +40,9 @@ button {
     font-size: calc(0.3em + 1vw);
     font-family: var(--font-family-Oswald-700);
 }
-
+table {
+    border: 1px solid white;
+}
 
 /* górny pasek z tabelą, napisem i logowaniem */
 #topBar {
@@ -131,6 +133,12 @@ button {
     padding: calc(2rem + 2vw);
     top: calc(2rem + 2vw);
     left: calc(2rem + 2vw);
+}
+
+/* leaderboard */
+#leaderboard {
+    display: none;
+    justify-items: center;
 }
 
 /* responsywność */

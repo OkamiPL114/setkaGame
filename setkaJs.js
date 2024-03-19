@@ -225,3 +225,17 @@ function showAccount(){
     ekranWyniku.appendChild(retryButton);
     ekranWyniku.style.display = "block";*/
 }
+
+let isLeaderboardHidden = true;
+// leaderboard
+function showLeaderboard(){
+    const leaderboard = document.getElementById("leaderboard");
+    if(isLeaderboardHidden){
+        leaderboard.style.display = "flex";
+        isLeaderboardHidden = !isLeaderboardHidden;
+    }
+    else{
+        leaderboard.style.display = "none";
+        isLeaderboardHidden = !isLeaderboardHidden;
+    }
+}
