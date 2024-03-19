@@ -29,7 +29,7 @@
     <div id="account"></div>
     <div id="leaderboard">
         <?php
-            $db = new mysqli('localhost', 'root', '', 'setkaGame');
+            /*$db = new mysqli('localhost', 'root', '', 'setkaGame');
             if(mysqli_connect_error())
             {
                 echo "Błąd bazy danych";
@@ -42,7 +42,7 @@
             $result100 = $db->query($q100);
             $result50 = $db->query($q50);
             $result25 = $db->query($q25);
-            $result10 = $db->query($q10);
+            $result10 = $db->query($q10);*/
         ?>
         <table>
             <tr>
