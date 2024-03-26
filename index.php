@@ -58,6 +58,7 @@
             else{
                 echo "<p>Brak wyników dla gry 1 - 100</p>";
             }
+
             if(mysqli_num_rows($result50) > 0){
                 echo "<table><tr><th>Gracz</th><th>Wynik 100</th></tr>";
                 while($row = $result50->fetch_assoc()) {
@@ -71,6 +72,7 @@
             else{
                 echo "<p>Brak wyników dla gry 1 - 50</p>";
             }
+
             if(mysqli_num_rows($result25) > 0){
                 echo "<table><tr><th>Gracz</th><th>Wynik 100</th></tr>";
                 while($row = $result25->fetch_assoc()) {
@@ -84,6 +86,7 @@
             else{
                 echo "<p>Brak wyników dla gry 1 - 25</p>";
             }
+            
             if(mysqli_num_rows($result10) > 0){
                 echo "<table><tr><th>Gracz</th><th>Wynik 100</th></tr>";
                 while($row = $result10->fetch_assoc()) {

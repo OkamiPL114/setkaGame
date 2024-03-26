@@ -5,6 +5,7 @@ let aktualnaLiczba = 1;
 let startInterval; // odliczanie do startu gry
 let timerInterval; // licznik czasu
 let maximum = 0; // zakres gry od 1 do x
+let playerName = "";
 
 function rozpocznijGre(max) {
     let startButtons = document.getElementById("startButtons");
@@ -97,16 +98,29 @@ function zakonczGre() {
     // zbuduj komunikat zakończenia
     const firstLine = document.createElement("p");
     firstLine.textContent = "Gratulacje!";
-    firstLine.style.fontSize = "30px";
+    firstLine.style.fontSize = "2rem";
+
     const secondLine = document.createElement("p");
     secondLine.textContent = "Ukończyłeś grę w " + czas.toFixed(2) + " s.";
-    secondLine.style.fontSize = "30px";
+    secondLine.style.fontSize = "2rem";
+
     const retryButton = document.createElement("button");
     retryButton.textContent = "Zagraj ponownie";
     retryButton.addEventListener("click", zagrajPonownie);
+
+    const scoreSaved = document.createElement("p");
+    if(playerName === ""){
+        scoreSaved.textContent = "Zaloguj się by zapisywać wyniki";
+    }
+    else {
+        scoreSaved.textContent = "Zapisano wynik jako " + playerName;
+    }
+    scoreSaved.style.fontSize = "1rem";
+
     ekranWyniku.appendChild(firstLine);
     ekranWyniku.appendChild(secondLine);
     ekranWyniku.appendChild(retryButton);
+    ekranWyniku.appendChild(scoreSaved);
     ekranWyniku.style.display = "block";
 }
 
@@ -142,7 +156,6 @@ function zagrajPonownie(){
 }
 
 // kod od konta i leaderboarda
-let playerName = "";
 
 function setPlayerName(){
     // przypisz nowy nick graczowi
