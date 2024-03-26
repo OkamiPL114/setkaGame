@@ -46,7 +46,7 @@
             $db -> close();
 
             if(mysqli_num_rows($result100) > 0){
-                echo "<table><tr><th>Gracz</th><th>Wynik 100</th></tr>";
+                echo "<table><tr><th colspan=2>Wyniki 1 - 100</th></tr>";
                 while($row = $result100->fetch_assoc()) {
                     echo "<tr>";
                     echo "<td>".$row["playerName"]."</td>";

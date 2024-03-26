@@ -1,0 +1,6 @@
+CREATE TABLE `setkagame`.`scores` (`id` INT NOT NULL AUTO_INCREMENT , `playerName` TINYTEXT NOT NULL , `gameType` INT NOT NULL , `gameScore` TIME NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+INSERT INTO `scores` (`id`, `playerName`, `gameType`, `gameScore`) VALUES (NULL, 'NoobMaster69', '100', '00:01:16');
+INSERT INTO `scores` (`id`, `playerName`, `gameType`, `gameScore`) VALUES (NULL, 'NoobMaster69', '50', '00:01:16');
+INSERT INTO `scores` (`id`, `playerName`, `gameType`, `gameScore`) VALUES (NULL, 'NoobMaster69', '25', '00:01:16');
+INSERT INTO `scores` (`id`, `playerName`, `gameType`, `gameScore`) VALUES (NULL, 'NoobMaster69', '10', '00:01:16');
