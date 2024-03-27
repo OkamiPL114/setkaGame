@@ -60,7 +60,7 @@
             }
 
             if(mysqli_num_rows($result50) > 0){
-                echo "<table><tr><th>Gracz</th><th>Wynik 100</th></tr>";
+                echo "<table><tr><th colspan=2>Wyniki 1 - 50</th></tr>";
                 while($row = $result50->fetch_assoc()) {
                     echo "<tr>";
                     echo "<td>".$row["playerName"]."</td>";
@@ -74,7 +74,7 @@
             }
 
             if(mysqli_num_rows($result25) > 0){
-                echo "<table><tr><th>Gracz</th><th>Wynik 100</th></tr>";
+                echo "<table><tr><th colspan=2>Wyniki 1 - 25</th></tr>";
                 while($row = $result25->fetch_assoc()) {
                     echo "<tr>";
                     echo "<td>".$row["playerName"]."</td>";
@@ -88,7 +88,7 @@
             }
             
             if(mysqli_num_rows($result10) > 0){
-                echo "<table><tr><th>Gracz</th><th>Wynik 100</th></tr>";
+                echo "<table><tr><th colspan=2>Wyniki 1 - 10</th></tr>";
                 while($row = $result10->fetch_assoc()) {
                     echo "<tr>";
                     echo "<td>".$row["playerName"]."</td>";

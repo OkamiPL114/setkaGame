@@ -140,7 +140,8 @@ td, th {
     background-color: #1a237e;
     border: 2px solid black;
     display: none;
-    justify-items: center;
+    justify-content: space-around;
+    padding: calc(0.5rem + 0.5vw);
 }
 
 /* responsywność */
