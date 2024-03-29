@@ -129,6 +129,9 @@ td, th {
     top: calc(2rem + 2vw);
     left: calc(2rem + 2vw);
 }
+input[type="text"]{
+    size: calc(1rem + 0.5vw);
+}
 
 /* leaderboard */
 #leaderboard {
@@ -137,6 +140,9 @@ td, th {
     display: none;
     justify-content: space-around;
     padding: calc(0.5rem + 0.5vw);
+}
+tr, th, td {
+    padding: 4px;
 }
 
 /* strona z leaderboardem */

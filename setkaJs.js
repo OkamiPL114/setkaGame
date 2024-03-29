@@ -212,7 +212,8 @@ function showAccount(){
         accountScreen.appendChild(firstLine);
         accountScreen.appendChild(secondLine);
         accountScreen.appendChild(thirdLine);
-        accountScreen.style.display = "block";
+        accountScreen.style.display = "flex";
+        accountScreen.style.justifyContent = "center";
     }
     else {
         // stwórz formularz do podania nicku
@@ -224,16 +225,17 @@ function showAccount(){
         secondLine.id = "newPlayerName";
         secondLine.type = "text";
         secondLine.style.fontSize = "calc(0.5rem + 1 vw)";
-
+        
         const thirdLine = document.createElement("button");
         thirdLine.textContent = "Zapisz";
         thirdLine.addEventListener("click", setPlayerName);
-
+        
         const accountScreen = document.getElementById("account");
         accountScreen.appendChild(firstLine);
         accountScreen.appendChild(secondLine);
         accountScreen.appendChild(thirdLine);
-        accountScreen.style.display = "block";
+        accountScreen.style.display = "flex";
+        accountScreen.style.justifyContent = "center";
     }
 /*
     firstLine.textContent = "Gratulacje!";
