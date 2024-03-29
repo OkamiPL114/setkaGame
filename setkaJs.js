@@ -95,6 +95,17 @@ function zakonczGre() {
     const ekranWyniku = document.getElementById("wynik");
     const czas = (koniecCzas - startCzas) / 1000; // Czas w sekundach
     
+    // zapisanie wyniku do bazy danych
+    const url = "./wyniki.php";
+    fetch(url, {
+        method : "POST",
+        body: JSON.stringify({name: playerName, score: czas.toFixed(2), gameType: maximum}),
+    }).then(
+        response => response.text() 
+    ).then(
+        html => console.log(html)
+    );
+
     // zbuduj komunikat zakończenia
     const firstLine = document.createElement("p");
     firstLine.textContent = "Gratulacje!";

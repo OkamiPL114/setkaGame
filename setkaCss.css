@@ -68,7 +68,7 @@ td, th {
 }
 #logInDiv {
     background-color: aqua;
-    padding: 5px;
+    padding: 10px;
     display: flex;
 }
 #logInIcon {
@@ -137,6 +137,17 @@ td, th {
     display: none;
     justify-content: space-around;
     padding: calc(0.5rem + 0.5vw);
+}
+
+/* strona z leaderboardem */
+#goBackDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#results {
+    display: flex;
+    justify-content: space-around;
 }
 
 /* responsywność */
